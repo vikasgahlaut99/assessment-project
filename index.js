@@ -1,13 +1,13 @@
 function mocktail() {
     if(document.getElementById("mock-tail").innerHTML == ""){
-        document.getElementById("search").innerHTML = "";
+        // document.getElementById("search").innerHTML = "";
         document.getElementById("cock-tail").innerHTML = "";
-        document.getElementById("glasses").innerHTML = "";
+        document.getElementById("ingredient").innerHTML = "";
     }else{
-        document.getElementById("search").innerHTML = "";
+        // document.getElementById("search").innerHTML = "";
         document.getElementById("mock-tail").innerHTML = "";
         document.getElementById("cock-tail").innerHTML = "";
-        document.getElementById("glasses").innerHTML = "";
+        document.getElementById("ingredient").innerHTML = "";
     }
 
     var xhttp = new XMLHttpRequest();
@@ -16,7 +16,7 @@ function mocktail() {
             // document.getElementById("demo").innerHTML = this.responseText;
             var obj = JSON.parse(this.responseText);
             var i,j;
-            for(i = 0; i < 6; i++)
+            for(i = 0; i < 12; i++)
             {
                 var div = document.getElementById("mock-tail");
                 var divItems = document.createElement("div");
@@ -42,13 +42,13 @@ function mocktail() {
 function cocktail() {
     if(document.getElementById("cock-tail").innerHTML == ""){
         document.getElementById("mock-tail").innerHTML = "";
-        document.getElementById("search").innerHTML = "";
-        document.getElementById("glasses").innerHTML = "";
+        // document.getElementById("search").innerHTML = "";
+        document.getElementById("ingredient").innerHTML = "";
     }else{
-        document.getElementById("search").innerHTML = "";
+        // document.getElementById("search").innerHTML = "";
         document.getElementById("mock-tail").innerHTML = "";
         document.getElementById("cock-tail").innerHTML = "";
-        document.getElementById("glasses").innerHTML = "";
+        document.getElementById("ingredient").innerHTML = "";
     }
     
     var xhttp = new XMLHttpRequest();
@@ -57,7 +57,7 @@ function cocktail() {
             // document.getElementById("demo").innerHTML = this.responseText;
             var obj = JSON.parse(this.responseText);
             var i,j;
-            for(i = 0; i < 6; i++)
+            for(i = 0; i < 9; i++)
             {
                 var div = document.getElementById("cock-tail");
                 var divItems = document.createElement("div");
@@ -77,5 +77,45 @@ function cocktail() {
         }
     };
     xhttp.open("GET", "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail", true);
+    xhttp.send();
+}
+
+
+function ingredient(){
+    if(document.getElementById("ingredient").innerHTML == ""){
+        document.getElementById("mock-tail").innerHTML = "";
+        // document.getElementById("search").innerHTML = "";
+        document.getElementById("ingredient").innerHTML = "";
+    }else{
+        // document.getElementById("search").innerHTML = "";
+        document.getElementById("mock-tail").innerHTML = "";
+        document.getElementById("cock-tail").innerHTML = "";
+        document.getElementById("ingredient").innerHTML = "";
+    }
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // document.getElementById("demo").innerHTML = this.responseText;
+            var obj = JSON.parse(this.responseText);
+            var i;
+            for(i = 0; i < 9; i++)
+            {
+                var div = document.getElementById("ingredient");
+                var divItems = document.createElement("div");
+                divItems.setAttribute("class","items");
+               
+                var divCaption = document.createElement("div");
+                divCaption.setAttribute("class","caption");
+                var p = document.createElement("p");
+                
+                p.innerHTML = obj.ingredients[i].strDescription;
+                divCaption.appendChild(p);
+                divItems.appendChild(divCaption);
+                div.appendChild(divItems);
+            }
+        }
+    };
+    xhttp.open("GET", "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka", true);
     xhttp.send();
 }
