@@ -26,6 +26,7 @@ a
 {
 	width: 80%;
 	margin: auto;
+	font-family: 'Odibee Sans', cursive;
 } 
 
 .header-link
@@ -57,8 +58,10 @@ input[type="text"]
 	float: left; 
 	height: 50px; 
 	padding: 15px; 
-	font-size: 20px; 
+	font-size: 50px; 
 	font-weight: bold;
+	font-family: 'Bad Script', cursive;
+	color:#fa00e5;
 }
 
 .content
@@ -91,8 +94,10 @@ input[type="text"]
 	padding-bottom: 6%; 
 	overflow:hidden; 
 	margin-bottom: 12%; 
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(202, 4, 252, 0.7);
 	max-width: 660px;
+	font-family: 'Calistoga', cursive;
+	color:#00fff2;
 }
 
 .button
@@ -111,6 +116,7 @@ input[type="text"]
 	width: 90%;
 	margin: auto;
 	overflow: hidden;
+	font-family: 'Quicksand', sans-serif;
 }
 
 .items
@@ -120,11 +126,12 @@ input[type="text"]
 	padding: 4px; 
 	margin-bottom: 20px; 
 	line-height: 1.42857143; 
-	background-color: #fff;
+	background-color: rgb(194, 0, 253);
 	border: 1px solid #ddd; 
 	border-radius: 4px; 
 	float: left; 
 	margin-left: 1%;
+	font-family: 'Nunito', sans-serif;
 }
 
 .thumbnail
