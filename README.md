@@ -17,4 +17,4 @@ List of Endpoints -
 
 #Random:-https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka
 
-Live Link : -<a href="https://vikasgahlaut99.github.io/vikasgahlaut99.github.io-cocktail_hub/"> Have a look at my project</a>
+Live Link : -<a href="https://vikasgahlaut99.github.io/assessment-project"> Have a look at my project</a>
